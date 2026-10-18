@@ -13,7 +13,7 @@
             <h1>Institucion Educativa</h1>
        
            <ul>
-              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html" class="active">Inicio</a></li>
               <li><a href="Profesores.html">Profesores</a></li>
               <li><a href="Estudiantes.html">Estudiantes</a></li>
               <li><a href="Contactos.html">Contactos</a></li>
@@ -25,5 +25,16 @@
             <h2>Bienvenidos a nuestra Institución Educativa</h2>
             <p>En nuestra institución, nos dedicamos a brindar una educación de calidad y fomentar el desarrollo integral de nuestros estudiantes.</p>
         </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const paginaActual = window.location.pathname.split("/").pop();
+
+            document.querySelectorAll("nav a").forEach(link => {
+                const href = link.getAttribute("href");
+                link.classList.toggle("active", href === paginaActual);
+            });
+        });
+    </script>
 </body>
 </html>

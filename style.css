@@ -29,11 +29,25 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav a:hover{
+nav a {
+    color: #2c6e49;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
     background-color: #45a049;
     color: white;
     font-weight: bold;
-    transition: color 0.3s ease;
+}
+
+nav a.active {
+    background-color: #2c6e49;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 nav a:active {
